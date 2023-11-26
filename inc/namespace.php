@@ -1,11 +1,11 @@
 <?php
 /**
- * Figuren_Theater project_name.
+ * Figuren_Theater theater_production_statistics.
  *
- * @package figuren-theater/project_urlname
+ * @package figuren-theater/theater-production-statistics
  */
 
-namespace Figuren_Theater\project_name;
+namespace Figuren_Theater\theater_production_statistics;
 
 use Altis;
 
@@ -24,9 +24,9 @@ function register() :void {
 	];
 
 	Altis\register_module(
-		'project_urlname',
+		'theater-production-statistics',
 		DIRECTORY,
-		'project_name',
+		'theater_production_statistics',
 		$options,
 		__NAMESPACE__ . '\\bootstrap'
 	);
