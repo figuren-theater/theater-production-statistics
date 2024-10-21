@@ -14,22 +14,7 @@ use Altis;
  *
  * @return void
  */
-function register() :void {
-
-	$default_settings = [
-		'enabled' => true, // Needs to be set.
-	];
-	$options = [
-		'defaults' => $default_settings,
-	];
-
-	Altis\register_module(
-		'theater-production-statistics',
-		DIRECTORY,
-		'theater_production_statistics',
-		$options,
-		__NAMESPACE__ . '\\bootstrap'
-	);
+function register(): void {
 }
 
 /**
@@ -37,7 +22,7 @@ function register() :void {
  *
  * @return void
  */
-function bootstrap() :void {
+function bootstrap(): void {
 
 	/**
 	 * Automatically load Plugins.

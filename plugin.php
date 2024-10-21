@@ -8,7 +8,7 @@
  * @license           GPL-3.0+
  *
  * @wordpress-plugin
- * Plugin Name:       figuren.theater | theater_production_statistics
+ * Plugin Name:       figuren.theater | theater production statistics
  * Plugin URI:        https://github.com/figuren-theater/theater-production-statistics
  * Description:       ... like the figuren.theater WordPress Multisite network.
  * Version:           0.1.0-alpha
@@ -23,8 +23,18 @@
  * Update URI:        https://github.com/figuren-theater/theater-production-statistics
  */
 
-namespace Figuren_Theater\theater_production_statistics;
+namespace Figuren_Theater\Production_Statistics;
+
+use function add_action;
 
 const DIRECTORY = __DIR__;
 
-add_action( 'altis.modules.init', __NAMESPACE__ . '\\register' );
+/**
+ * REMOVE
+ *
+ * @todo Add composer autoloading strategy
+ */
+require_once DIRECTORY . '/inc/.../namespace.php'; // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.UsingCustomConstant
+require_once DIRECTORY . '/inc/namespace.php'; // phpcs:ignore WordPressVIPMinimum.Files.IncludingFile.UsingCustomConstant
+
+add_action( 'init', __NAMESPACE__ . '\\register', 0 );
